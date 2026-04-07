@@ -1,3 +1,4 @@
+\
 from __future__ import annotations
 
 import json
@@ -51,10 +52,8 @@ TIME_CONFIG = {
 slot = next(name for name, cfg in TIME_CONFIG.items() if cfg["range"](hour))
 cfg = TIME_CONFIG[slot]
 
-
 def write_text(path: pathlib.Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
-
 
 def request_json(url: str):
     req = urllib.request.Request(
@@ -63,7 +62,6 @@ def request_json(url: str):
     )
     with urllib.request.urlopen(req, timeout=20) as resp:
         return json.load(resp)
-
 
 def card_shell(title: str, subtitle: str, body: str, width: int = 1200, height: int = 420) -> str:
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
@@ -78,7 +76,6 @@ def card_shell(title: str, subtitle: str, body: str, width: int = 1200, height: 
   <text x="36" y="96" font-size="18" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">{escape(subtitle)}</text>
   {body}
 </svg>"""
-
 
 def make_greeting() -> None:
     color = cfg["color"]
@@ -107,7 +104,6 @@ def make_greeting() -> None:
 </svg>"""
     write_text(ASSETS / "greeting.svg", svg)
 
-
 def select_banner() -> None:
     dest = ROOT / "current-banner.png"
     candidates = [
@@ -119,22 +115,18 @@ def select_banner() -> None:
     if source and source.resolve() != dest.resolve():
         shutil.copyfile(source, dest)
 
-
 def safe_profile(username: str):
     try:
         profile = request_json(f"https://api.github.com/users/{username}")
     except Exception:
         profile = {"public_repos": 0, "followers": 0, "following": 0}
-
     try:
         events = request_json(f"https://api.github.com/users/{username}/events/public?per_page=100")
         if not isinstance(events, list):
             events = []
     except Exception:
         events = []
-
     return profile, events
-
 
 def build_stats(profile: dict) -> None:
     repos = int(profile.get("public_repos", 0) or 0)
@@ -163,7 +155,6 @@ def build_stats(profile: dict) -> None:
   <text x="1000" y="316" text-anchor="middle" font-size="18" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Accounts you follow</text>
 """
     write_text(ASSETS / "github-stats.svg", card_shell("GitHub Stats", "Live values from the public GitHub profile API", body))
-
 
 def build_graph(events: list[dict]) -> tuple[int, int]:
     counts = Counter()
@@ -222,7 +213,6 @@ def build_graph(events: list[dict]) -> tuple[int, int]:
     write_text(ASSETS / "activity-graph.svg", card_shell("Activity Graph", "Recent public activity from GitHub events", body))
     return active_days, total_events
 
-
 def build_achievements(profile: dict, active_days: int, total_events: int) -> None:
     repos = int(profile.get("public_repos", 0) or 0)
     followers = int(profile.get("followers", 0) or 0)
@@ -253,7 +243,6 @@ def build_achievements(profile: dict, active_days: int, total_events: int) -> No
     body = "".join(rows) + '<text x="36" y="390" font-size="18" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Automatically refreshed from public profile signals.</text>'
     write_text(ASSETS / "achievements.svg", card_shell("Achievements", "Separate milestone cards for your profile", body))
 
-
 def ensure_placeholders() -> None:
     placeholders = {
         "github-stats.svg": card_shell("GitHub Stats", "Placeholder", '<text x="36" y="170" font-size="22" fill="#64748b" font-family="Inter, sans-serif">Run the workflow once to load live values.</text>'),
@@ -264,7 +253,6 @@ def ensure_placeholders() -> None:
         path = ASSETS / name
         if not path.exists():
             write_text(path, svg)
-
 
 def main() -> None:
     make_greeting()
@@ -279,7 +267,6 @@ def main() -> None:
     build_stats(profile)
     active_days, total_events = build_graph(events)
     build_achievements(profile, active_days, total_events)
-
 
 if __name__ == "__main__":
     main()
