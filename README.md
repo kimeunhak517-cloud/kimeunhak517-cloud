@@ -127,6 +127,9 @@ Fundamentals → Problem Solving → Projects → Deeper CS → AI / ML
 저는 현실 세계와 가상 세계를 잇는 도구를 개발하여, 사람들의 삶을 더욱 풍요롭고 윤택하게 만드는 데 기여하고 싶습니다. ✨
 
 
+
+
+
 🌐 I believe the world cannot be defined by 0s and 1s alone.
 
 It is a complex yet beautiful place, shaped by countless relationships, emotions, and contexts that go far beyond simple binary thinking.
