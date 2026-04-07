@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="GitHub Stats placeholder">
+  <rect width="100%" height="100%" rx="28" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="36" y="64" font-size="34" font-weight="700" fill="#0f172a" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">GitHub Stats</text>
+  <text x="36" y="96" font-size="18" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Run the workflow once to replace this placeholder with live values.</text>
+  <rect x="40" y="132" width="320" height="220" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="440" y="132" width="320" height="220" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="840" y="132" width="320" height="220" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="200" y="210" text-anchor="middle" font-size="22" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Public Repositories</text>
+  <text x="200" y="278" text-anchor="middle" font-size="56" font-weight="700" fill="#0f172a" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">--</text>
+  <text x="600" y="210" text-anchor="middle" font-size="22" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Followers</text>
+  <text x="600" y="278" text-anchor="middle" font-size="56" font-weight="700" fill="#0f172a" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">--</text>
+  <text x="1000" y="210" text-anchor="middle" font-size="22" fill="#64748b" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">Following</text>
+  <text x="1000" y="278" text-anchor="middle" font-size="56" font-weight="700" fill="#0f172a" font-family="Inter, Pretendard, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif">--</text>
+</svg>
