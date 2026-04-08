@@ -2,6 +2,11 @@ name: Update profile visuals
 
 'on':
   workflow_dispatch:
+  schedule:
+    - cron: '2 20 * * *'   # 05:02 Asia/Seoul
+    - cron: '2 2 * * *'    # 11:02 Asia/Seoul
+    - cron: '2 8 * * *'    # 17:02 Asia/Seoul
+    - cron: '2 13 * * *'   # 22:02 Asia/Seoul
 
 permissions:
   contents: write
