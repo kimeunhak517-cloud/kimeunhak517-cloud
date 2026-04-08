@@ -13,7 +13,7 @@
 
 ## 🌿 About Me
 
-### 🇰🇷 한국어
+###
 
 반갑습니다.
 
@@ -29,10 +29,11 @@
 
 당신으로 말미암아 발화된 작은 싹 하나도 언젠가는 누구보다 크고 아름다운 꽃봉오리로 돋아나겠지요.
 
-기름진 들판에 씨를 뿌리고, 그것이 여문 여러분의 앞날에  
+기름진 들판에 씨를 뿌리고, 그것이 여문 여러분의 앞날에
+
 부디 행복이 있기를 바랍니다. 🌾✨
 
-### 🇺🇸 English
+###
 
 Hello, and welcome.
 
@@ -84,7 +85,7 @@ and may happiness remain with you. 🌿🤍
 
 ## 🌐 Goal
 
-### 🇰🇷 한국어
+###
 
 🌐 세상은 단순히 0과 1로만 쓰여지는 게 아닙니다.
 
@@ -92,7 +93,7 @@ and may happiness remain with you. 🌿🤍
 
 저는 현실 세계와 가상 세계를 잇는 도구를 개발하여, 사람들의 삶을 더욱 풍요롭고 윤택하게 만드는 데 기여하고 싶습니다. ✨
 
-### 🇺🇸 English
+###
 
 🌐 I believe the world cannot be defined by 0s and 1s alone.
 
